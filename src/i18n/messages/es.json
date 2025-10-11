@@ -1,0 +1,96 @@
+{
+  "Error": {
+    "something-went-wrong": "¡Algo salió mal!",
+    "try-again": "Intentar de nuevo"
+  },
+  "layout": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "projects": "Proyectos",
+    "about": "Acerca de",
+    "github": "GitHub",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "youtube": "YouTube",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "skip-to-main-content": "Saltar al contenido principal",
+    "change-language": "Cambiar idioma",
+    "toggle-menu": "Alternar menú",
+    "now-playing": {
+      "loading": "Cargando...",
+      "error": "Error al cargar la pista",
+      "not-listening": "No estoy escuchando nada"
+    }
+  },
+  "theme-toggle": {
+    "toggle-theme": "Alternar tema",
+    "options": {
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title-top": "Hola, soy",
+      "title-middle-left": "Construyo",
+      "title-middle-right": "experiencias web",
+      "title-bottom": "Desarrollador Frontend",
+      "amazing": "increíbles",
+      "stunning": "impresionantes",
+      "fantastic": "fantásticas",
+      "attractive": "atractivas",
+      "location-timezone": "Ubicado en Tu Ubicación • Tu Zona Horaria"
+    },
+    "about-me": {
+      "title": "Acerca de Mí",
+      "location": "Ubicación",
+      "stacks": "Tecnologías",
+      "connect": "Conectar",
+      "coding-hours": "Horas de Código",
+      "fav-framework": "Framework Favorito",
+      "more": "Más sobre mí"
+    },
+    "get-in-touch": {
+      "title": "¡Trabajemos juntos!",
+      "description": "Siempre estoy abierto a discutir nuevas oportunidades y proyectos interesantes.",
+      "image-alt": "Tu foto de perfil"
+    },
+    "latest-articles": {
+      "title": "Artículos Recientes",
+      "card": "Artículo",
+      "more": "Ver todos los artículos"
+    },
+    "selectedProjects": {
+      "title": "Proyectos Seleccionados",
+      "card": "Proyecto",
+      "more": "Ver todos los proyectos"
+    }
+  },
+  "metadata": {
+    "site-title": "Tu Nombre - Desarrollador Frontend",
+    "site-description": "Un blog y portafolio moderno construido con Next.js 15, TypeScript y Tailwind CSS. Compartiendo conocimiento y experiencias a través de la escritura."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Pensamientos, historias e ideas sobre desarrollo web y programación."
+  },
+  "component": {
+    "filtered-posts": {
+      "placeholder": "Buscar artículos...",
+      "no-posts-found": "No se encontraron publicaciones."
+    }
+  },
+  "common": {
+    "error": "Error",
+    "likes": "{count, plural, one {# me gusta} other {# me gusta}}",
+    "views": "{count, plural, one {# vista} other {# vistas}}"
+  },
+  "NotFound": {
+    "title": "404 - Página No Encontrada",
+    "go-to-homepage": "Ir al inicio"
+  }
+}

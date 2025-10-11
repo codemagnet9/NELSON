@@ -1,0 +1,41 @@
+'use client'
+
+import { useQuery } from '@tanstack/react-query'
+import { DataTableSkeleton } from '@/components/ui/data-table'
+
+import AdminPageHeader from '@/components/admin/admin-page-header'
+import CommentsTable from '@/components/admin/comments-table'
+import { useTRPC } from '@/trpc/client'
+
+// Choose one based on your i18n setup:
+import { useTranslations } from 'next-intl'
+// import { useTranslation } from 'react-i18next'
+// import { useI18n } from '@/locales/client'
+
+const Page = () => {
+  const trpc = useTRPC()
+  const { status, data } = useQuery(trpc.comments.getComments.queryOptions())
+  
+  // Choose one based on your i18n setup:
+  const t = useTranslations()
+  // const { t } = useTranslation()
+  // const t = useI18n()
+
+  const isSuccess = status === 'success'
+  const isLoading = status === 'pending'
+  const isError = status === 'error'
+
+  return (
+    <div className='space-y-6'>
+      <AdminPageHeader
+        title={t('admin.page-header.comments.title')}
+        description={t('admin.page-header.comments.description')}
+      />
+      {isLoading ? <DataTableSkeleton columnCount={3} searchableColumnsCount={2} /> : null}
+      {isError ? <div>{t('admin.table.comments.failed-to-fetch-comments-data')}</div> : null}
+      {isSuccess ? <CommentsTable data={data.comments} /> : null}
+    </div>
+  )
+}
+
+export default Page

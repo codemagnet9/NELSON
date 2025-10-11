@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@import './shiki.css';
+@import './typography.css';
+
+@theme {
+  --color-anchor: var(--anchor);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --background-image-nav-link-indicator: var(--nav-link-indicator);
+  --background-image-email-button: var(--email-button);
+
+  --shadow-feature-card: var(--feature-card);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-cal-sans);
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+
+    /* Custom colors from your sample */
+    --anchor: rgb(255, 34, 14);
+    --nav-link-indicator: radial-gradient(
+      44.6% 825% at 50% 50%,
+      rgb(255 133 133) 0%,
+      rgb(255 72 109 / 0) 100%
+    );
+    --email-button: linear-gradient(180deg, rgb(210 10 30) 5%, rgb(239 90 90) 100%);
+    --feature-card: 0 -1px 3px 0 rgb(0 0 0 / 0.05);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    /* Custom dark mode colors from your sample */
+    --anchor: rgb(255, 69, 51);
+    --nav-link-indicator: radial-gradient(
+      44.6% 825% at 50% 50%,
+      rgb(255 28 28) 0%,
+      rgb(255 72 109 / 0) 100%
+    );
+    --feature-card: 0 0 0 1px rgb(255 255 255 / 0.06), 0 -1px rgb(255 255 255 / 0.1);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .bg-nav-link-indicator {
+    background-image: var(--background-image-nav-link-indicator);
+  }
+  
+  .bg-email-button {
+    background-image: var(--background-image-email-button);
+  }
+  
+  .shadow-feature-card {
+    box-shadow: var(--shadow-feature-card);
+  }
+  
+  .text-anchor {
+    color: var(--color-anchor);
+  }
+}
+
+/* Marquee animations */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+/* Gradient backgrounds for MainLayout */
+.gradient-background-top {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
+}
+
+.gradient-background-bottom {
+  background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
+}
+
+.dark .gradient-background-top {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.15), rgba(0, 0, 0, 0));
+}
+
+.dark .gradient-background-bottom {
+  background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(120, 119, 198, 0.15), rgba(0, 0, 0, 0));
+}
+
+/* Simple Icons color adjustments for better visibility */
+.simple-icons {
+  color: rgb(39 39 42) !important; /* zinc-800 for light mode */
+}
+
+.dark .simple-icons {
+  color: rgb(228 228 231) !important; /* zinc-200 for dark mode */
+}
+
+/* Ensure good contrast for all icons */
+.si-icon {
+  @apply text-zinc-800 dark:text-zinc-200;
+}

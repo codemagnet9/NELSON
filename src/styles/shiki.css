@@ -1,0 +1,29 @@
+/* Shiki syntax highlighting styles */
+pre {
+  @apply relative;
+}
+
+code {
+  @apply text-sm;
+}
+
+.shiki {
+  @apply overflow-x-auto rounded-lg border bg-card p-4 text-card-foreground;
+}
+
+/* Line numbers */
+.shiki code {
+  counter-reset: step;
+  counter-increment: step 0;
+}
+
+.shiki code .line::before {
+  content: counter(step);
+  counter-increment: step;
+  @apply mr-4 inline-block w-4 text-right text-muted-foreground;
+}
+
+/* Inline code */
+:not(pre) > code {
+  @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-medium;
+}
