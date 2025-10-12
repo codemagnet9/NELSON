@@ -7,7 +7,7 @@
   </a>
 
   <h1 align="center">
-    nikh9l.dev
+    nelson.dev
   </h1>
 
   <img src="https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000" alt="Framework" />
