@@ -87,7 +87,7 @@ git clone https://github.com/nelsonlaidev/nelsonlai.dev
 2. Navigate to the project directory:
 
 ```bash
-cd nikh9l .dev
+cd nelson.dev
 ```
 
 3. Install dependencies using Bun:
