@@ -1,41 +1,21 @@
-Here's an improved version of your README.md with better structure, visual elements, and organization:
-
-```markdown
 <div align="center">
   <a href="https://nelsonlai.dev">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/images/dark-header.png">
-      <img alt="Project Cover" src="apps/web/public/images/light-header.png" width="600">
+      <img alt="Project Cover" src="apps/web/public/images/light-header.png">
     </picture>
   </a>
 
   <h1 align="center">
-    nelsonlai.dev
+    nikh9l.dev
   </h1>
 
-  <p align="center">
-    Personal blog and portfolio built with modern web technologies
-  </p>
-
-  <div align="center">
-    <img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&labelColor=000000" alt="Next.js 15" />
-    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white" alt="Bun" />
-  </div>
-
-  <br/>
-
-  <div align="center">
-    <a href="https://nelsonlai.dev">🌐 Live Demo</a>
-    •
-    <a href="#getting-started">🚀 Get Started</a>
-    •
-    <a href="#features">✨ Features</a>
-    •
-    <a href="#development">💻 Development</a>
-  </div>
+  <img src="https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000" alt="Framework" />
+  <img src="https://img.shields.io/github/languages/top/nelsonlaidev/nelsonlai.dev?style=for-the-badge&labelColor=000" alt="Language" />
+  <img src="https://img.shields.io/github/license/nelsonlaidev/nelsonlai.dev?style=for-the-badge&labelColor=000" alt="License" />
 </div>
+
+Welcome to the monorepo of my personal blog! This repository houses the code for my blog, where I share my thoughts, projects, and insights. Feel free to explore and get inspired.
 
 ## ✨ Features
 
@@ -82,123 +62,136 @@ Here's an improved version of your README.md with better structure, visual eleme
 - **Containerization**: Docker & Docker Compose
 - **Editor**: [VS Code](https://code.visualstudio.com/) with [recommended extensions](.vscode/extensions.json)
 
-### Quick Start
+## Getting Started
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/nelsonlaidev/nelsonlai.dev
-   cd nelsonlai.dev
-   ```
+### Prerequisites
 
-2. **Install dependencies**
-   ```bash
-   bun install
-   ```
+- Node.js
+- Bun
+- Docker
+- [Visual Studio Code](https://code.visualstudio.com/) with [recommended extensions](.vscode/extensions.json)
+- Optionally [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 
-3. **Set up environment**
-   ```bash
-   cp .env.example .env.local
-   # Update environment variables in .env.local
-   ```
+## Development
 
-4. **Start services**
-   ```bash
-   docker compose up -d
-   ```
+To run this project locally, you need to set up the development environment.
 
-5. **Run database setup**
-   ```bash
-   bun db:migrate
-   bun db:seed
-   ```
+### Setup
 
-6. **Start development server**
-   ```bash
-   bun dev
-   ```
-
-### 🎯 Development URLs
-
-| Service | URL | Description |
-|---------|-----|-------------|
-| Main App | `localhost:3000` | Primary application |
-| Documentation | `localhost:3002` | Docs site |
-| PostgreSQL | `localhost:5432` | Database |
-| Redis | `localhost:6379` | Cache |
-| Redis HTTP | `localhost:8079` | Serverless Redis |
-
-### Available Scripts
+1. Clone the repository:
 
 ```bash
-bun dev          # Run all services
-bun dev:web      # Run only web app
-bun dev:docs     # Run only documentation
-bun build        # Build for production
-bun test         # Run tests
-bun lint         # Run linting
-bun type-check   # TypeScript check
+git clone https://github.com/nelsonlaidev/nelsonlai.dev
 ```
 
-## 🏗️ Project Structure
+2. Navigate to the project directory:
 
-```
-nelsonlai.dev/
-├── apps/
-│   ├── web/                 # Next.js main application
-│   └── docs/               # Documentation site
-├── packages/
-│   ├── db/                 # Database schema and migrations
-│   ├── ui/                 # Shared UI components
-│   ├── i18n/              # Internationalization
-│   └── ...                # Other shared packages
-├── docker-compose.yml     # Development services
-└── package.json          # Monorepo configuration
+```bash
+cd nikh9l .dev
 ```
 
-## 🙏 Credits
+3. Install dependencies using Bun:
 
-This project stands on the shoulders of giants in the open-source community:
+```bash
+bun install
+```
 
-### 🎨 Design & Inspiration
-- **[Timothy](https://www.timlrx.com/)** - [Tailwind Next.js Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
-- **[Eihab](https://www.eihabkhan.com/)** - UI design inspiration ([Figma](https://www.figma.com/community/file/1266863403759514317/))
+### Environment Setup
 
-### 🔧 Direct Dependencies
-- **Comment System** - [fuma-comment](https://github.com/fuma-nama/fuma-comment)
-- **MDX Plugins** - [fumadocs](https://github.com/fuma-nama/fumadocs)
-- **UI Components** - [shadcn/ui](https://ui.shadcn.com)
-- **ESLint Config** - [@antfu/eslint-config](https://github.com/antfu/eslint-config)
-- **Admin UI** - [shadcn-admin](https://github.com/satnaing/shadcn-admin)
+1. Copy `.env.example` to `.env.local` and update the environment variables as needed.
 
-### 💡 Inspiration Sources
-- [leerob.io](https://leerob.io/) • [delba.dev](https://delba.dev/) • [ped.ro](https://ped.ro/)
-- [theodorusclarence.com](https://theodorusclarence.com/) • [joshwcomeau.com](https://www.joshwcomeau.com/)
-- [blog.maximeheckel.com](https://blog.maximeheckel.com/) • [zenorocha.com](https://zenorocha.com/)
-- [nikolovlazar.com](https://nikolovlazar.com/) • [samuelkraft.com](https://samuelkraft.com/)
+```bash
+cp .env.example .env.local
+```
 
-## 👨‍💻 Author
+2. Run required services using Docker:
 
-**Nelson Lai** 
-- 🌐 [Portfolio](https://nelsonlai.dev)
-- 🐙 [GitHub](https://github.com/nelsonlaidev)
-- 💼 [LinkedIn](https://linkedin.com/in/nelsonlaidev)
+```bash
+docker compose up -d
+```
 
-## 💝 Support
+3. Run the database migrations:
 
-If this project helps you, consider supporting its development:
+```bash
+bun db:migrate
+```
 
-- ⭐ **Star** the repository
-- 🐛 **Report** issues and bugs  
-- 🔧 **Submit** pull requests
-- 💖 **[Sponsor](https://github.com/sponsors/nelsonlaidev)** the project
+4. Seed the database:
 
-## 📄 License
+```bash
+bun db:seed
+```
+
+5. Run the app:
+
+```bash
+bun dev # Run all services
+# or
+bun dev:web # Run only the web app
+# or
+bun dev:docs # Run only the documentation app
+```
+
+The services will be available at the following URLs:
+
+| Service          | URL              |
+| ---------------- | ---------------- |
+| App              | `localhost:3000` |
+| Docs             | `localhost:3002` |
+| Database         | `localhost:5432` |
+| Redis            | `localhost:6379` |
+| Redis serverless | `localhost:8079` |
+
+## Credits
+
+This project has been made possible thanks to the wonderful open-source community. Special thanks to:
+
+- [Timothy](https://www.timlrx.com/) for the [Tailwind nextjs starter blog template](https://github.com/timlrx/tailwind-nextjs-starter-blog).
+- [Eihab](https://www.eihabkhan.com/) for the UI design inspiration ([Figma](https://www.figma.com/community/file/1266863403759514317/geist-ui-kit-for-figma))
+
+This project also uses/adapts the following open-source projects:
+
+- Comment System - from [fuma-comment](https://github.com/fuma-nama/fuma-comment)
+- Rehype Plugins - from [fumadocs](https://github.com/fuma-nama/fumadocs)
+- UI components - from [shadcn/ui](https://github.com/shadcn-ui/ui)
+- ESLint config - from [@antfu/eslint-config](https://github.com/antfu/eslint-config)
+- Admin UI - from [shadcn-admin](https://github.com/satnaing/shadcn-admin)
+
+The following projects were referenced for inspiration:
+
+- [fumadocs](https://fumadocs.vercel.app/)
+- [leerob.io](https://leerob.io/)
+- [nerdfish.be](https://www.nerdfish.be/)
+- [nextra.site](https://nextra.site/)
+- [theodorusclarence.com](https://theodorusclarence.com/)
+- [ped.ro](https://ped.ro/)
+- [delba.dev](https://delba.dev/)
+- [joshwcomeau.com](https://www.joshwcomeau.com/)
+- [blog.maximeheckel.com](https://blog.maximeheckel.com/)
+- [zenorocha.com](https://zenorocha.com/)
+- [jahir.dev](https://jahir.dev/)
+- [anishde.dev](https://anishde.dev/)
+- [nikolovlazar.com](https://nikolovlazar.com/)
+- [samuelkraft.com](https://samuelkraft.com/)
+- [bentogrids.com](https://bentogrids.com/)
+- [ui.aceternity.com](https://ui.aceternity.com/)
+- [hover.dev](https://www.hover.dev/)
+- [vocs.dev](https://vocs.dev/)
+
+## Author
+
+- [@nelsonlaidev](https://github.com/nelsonlaidev)
+
+## Donation
+
+If you find this project helpful, consider supporting me by [sponsoring the project](https://github.com/sponsors/nelsonlaidev).
+
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-<div align="center">
-  <sub>Built with ❤️ in Hong Kong</sub>
-</div>
-```
+<p align="center">
+Made with ❤️ in United States
+</p>
